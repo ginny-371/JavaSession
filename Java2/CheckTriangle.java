@@ -20,5 +20,6 @@ public class CheckTriangle {
         else {
             System.out.println("Không là 3 cạnh của tam giác");
         }
+        scanner.close();
     }
 }
