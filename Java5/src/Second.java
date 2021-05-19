@@ -7,6 +7,9 @@ public class Second {
                 second = max;
                 max = arr[i];
             }
+            else if (arr[i] > second && arr[i] != max) {
+                second = arr[i];
+            }
         }
         System.out.println("\nSố lớn thứ 2 là:  "+second);
         System.out.print("Chỉ số của số lớn thứ 2 là:");
