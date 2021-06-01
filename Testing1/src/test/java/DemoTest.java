@@ -1,8 +1,10 @@
+import org.assertj.core.data.Offset;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeAll;
-
+import static org.assertj.core.api.Java6Assertions.assertThat;
+import static org.assertj.core.api.Assertions.withPrecision;
 import java.util.Scanner;
 
 public class DemoTest {
@@ -43,4 +45,40 @@ public class DemoTest {
         assertNotSame(actualArray,same);
     }
 
+    @Test
+    public void test_AssertJ_String(){
+        String[] contries = new String[]{"Russia", "Viet Nam", "America", "Japan", "China"};
+        assertThat(contries).contains("Viet Nam");
+        assertThat(contries).isNotEmpty();
+        assertThat(contries).startsWith("Russia");
+        assertThat(contries).isNotEmpty();
+        assertThat(contries).isNotEmpty()
+                .contains("Viet Nam")
+                .doesNotContainNull()
+                .containsSequence("America", "Viet Nam")
+                .hasSize(5);
+    }
+    @Test
+    public void test_AssertJ_Number(){
+        Double number1= 12.0;
+        Double number2= 10.0;
+        assertThat(number1).isBetween(12.0,12.2)
+                .isEqualTo(12.2,withPrecision(0.2d))
+                .isStrictlyBetween(9.0,12.1)
+                .isCloseTo(15.0, Offset.offset(3d))
+                .isNotZero();
+    }
+    @Test
+    public void testFormat_PhoneNumber(){
+        String phone_number = "92839203";
+        assertThat(phone_number).startsWith("0")
+                .hasSize(10)
+                .containsOnlyDigits();
+    }
+    @Test
+    public void testFormat_Email(){
+        String email = "tongdong@cs.com";
+        assertThat(email).isNotEmpty()
+                .containsPattern("^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)$");
+    }
 }
