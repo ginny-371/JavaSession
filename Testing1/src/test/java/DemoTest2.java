@@ -19,8 +19,11 @@ public class DemoTest2 {
 
     @Test
     public void testWeight(){
-        float weight = 43.0f;
-        assertThat(weight).isStrictlyBetween(0.0f,150.0f);
+        String weight = "34";
+        assertThat(weight).isNotEmpty()
+                .containsOnlyDigits();
+        int i = Integer.parseInt(weight);
+        assertThat(i).isStrictlyBetween(0,150);
     }
     //Chung minh la so, phan tu co 9 so, khong co chu)
     @Test
