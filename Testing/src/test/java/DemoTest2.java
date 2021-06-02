@@ -34,6 +34,7 @@ public class DemoTest2 {
         array_cmt[2] = "983729834";
         array_cmt[3] = "983729834";
         array_cmt[4] = "hdsk";
+        assertThat(array_cmt).doesNotHaveDuplicates();
         int k = array_cmt.length;
         for (int i=0; i<k; i++) {
             assertThat(array_cmt[i]).isNotEmpty()
