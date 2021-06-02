@@ -19,11 +19,11 @@ public class DemoTest2 {
 
     @Test
     public void testWeight(){
-        String weight = "34";
+        String weight = "34.4";
         assertThat(weight).isNotEmpty()
-                .containsOnlyDigits();
-        int i = Integer.parseInt(weight);
-        assertThat(i).isStrictlyBetween(0,150);
+                .containsPattern("[0-9]+(\\.[0-9])");
+        Float i = Float.parseFloat(weight);
+        assertThat(i).isStrictlyBetween(0.f,150.f);
     }
     //Chung minh la so, phan tu co 9 so, khong co chu)
     @Test
