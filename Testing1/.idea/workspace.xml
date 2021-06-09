@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5aa8a2cb-16c0-4482-b2b4-bc6fddec709b" name="Default Changelist" comment="" />
+    <list default="true" id="5aa8a2cb-16c0-4482-b2b4-bc6fddec709b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../Testing/src/test/java/DemoTest2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Testing/src/test/java/DemoTest2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Testing/target/test-classes/DemoTest2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../Testing/target/test-classes/DemoTest2.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,7 +43,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Testing" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Testing/src" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -129,6 +132,7 @@
       <workItem from="1622535384013" duration="4593000" />
       <workItem from="1622611081790" duration="673000" />
       <workItem from="1622624634222" duration="24000" />
+      <workItem from="1623115186732" duration="147000" />
     </task>
     <servers />
   </component>

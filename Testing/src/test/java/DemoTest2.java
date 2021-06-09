@@ -6,7 +6,6 @@ import org.junit.jupiter.api.BeforeAll;
 import static org.assertj.core.api.Java6Assertions.assertThat;
 import static org.assertj.core.api.Assertions.withPrecision;
 import java.util.Scanner;
-
 import static org.assertj.core.api.Java6Assertions.assertThat;
 
 public class DemoTest2 {
@@ -19,11 +18,11 @@ public class DemoTest2 {
 
     @Test
     public void testWeight(){
-        String weight = "34.4";
+        String weight = "1.01";
         assertThat(weight).isNotEmpty()
                 .containsPattern("[0-9]+(\\.[0-9])");
         Float i = Float.parseFloat(weight);
-        assertThat(i).isStrictlyBetween(0.f,150.f);
+        assertThat(i).isStrictlyBetween(1.f,150.f);
     }
     //Chung minh la so, phan tu co 9 so, khong co chu)
     @Test
