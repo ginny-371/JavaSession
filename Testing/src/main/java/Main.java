@@ -1,5 +1,15 @@
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) throws CheckingException {
+        //Bai 1
+        BMIException tc = new BMIException();
+        System.out.println("Chỉ số BMI là: "+tc.tinhBMI());
+        //Bai 2
+        NumberComparation nc = new NumberComparation();
+        nc.compareNumber();
+        //Bai 3
+        DanhsachNhanVien dsnv = new DanhsachNhanVien();
+        dsnv.nhapNhanVien();
+
 //        StringBuilder str = new StringBuilder();
 //        StringBuilder str2 = new StringBuilder("Hello Java");
 //        StringBuilder str3 = new StringBuilder(50);
@@ -29,8 +39,8 @@ public class Main {
 //            getS = getS+ rev.charAt(i);
 //        }
 //        System.out.println(getS);
-        ChuanHoaTen cht = new ChuanHoaTen();
+//        ChuanHoaTen cht = new ChuanHoaTen();
 //        cht.chuannHoa("Tống  thị Đông   ");
-        cht.formatFullName();
+//        cht.formatFullName();
     }
 }

@@ -18,7 +18,10 @@ public class MaNhanVien {
 Bài 3 Phân biệt String và StringBuilder
 1. String
 - Chuỗi không thể thay đổi
+- String dùng khi
 2. StringBuilder
 - Chuỗi có thể thay đổi
 - Hỗ trợ nhiều methods để tác động lên chuỗi hơn như ( append, insert, reverse..)
+- Hiệu năng của StringBUilder cao hơn
+
  */
