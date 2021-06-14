@@ -23,6 +23,5 @@ public class NumberComparation {
         }catch (InputMismatchException e){
             throw new CheckingException("Số nhập vào phải là 1 số");
         }
-
     }
 }

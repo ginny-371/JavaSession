@@ -1,11 +1,11 @@
 public class Main {
     public static void main(String[] args) throws CheckingException {
         //Bai 1
-        BMIException tc = new BMIException();
-        System.out.println("Chỉ số BMI là: "+tc.tinhBMI());
+//        BMIException tc = new BMIException();
+//        System.out.println("Chỉ số BMI là: "+tc.tinhBMI());
         //Bai 2
-        NumberComparation nc = new NumberComparation();
-        nc.compareNumber();
+//        NumberComparation nc = new NumberComparation();
+//        nc.compareNumber();
         //Bai 3
         DanhsachNhanVien dsnv = new DanhsachNhanVien();
         dsnv.nhapNhanVien();
