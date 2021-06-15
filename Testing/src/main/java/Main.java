@@ -7,8 +7,22 @@ public class Main {
 //        NumberComparation nc = new NumberComparation();
 //        nc.compareNumber();
         //Bai 3
-        DanhsachNhanVien dsnv = new DanhsachNhanVien();
-        dsnv.nhapNhanVien();
+//        DanhsachNhanVien dsnv = new DanhsachNhanVien();
+//        dsnv.nhapNhanVien();
+
+        //Bai1
+        String str = new String("You Only Live Once. But if You do it right. One is Enough");
+        Bai1 b1 = new Bai1();
+        b1.xuLyChuoi(str);
+
+        //Bai2
+        Bai2 b2 = new Bai2();
+        b2.validatePassword();
+
+        //Bai3
+        Bai3 b3 = new Bai3();
+        b3.monthOfYear();
+
 
 //        StringBuilder str = new StringBuilder();
 //        StringBuilder str2 = new StringBuilder("Hello Java");
