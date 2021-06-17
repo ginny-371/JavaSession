@@ -8,9 +8,6 @@ public class Bai3 {
             System.out.println("Nhap tháng: ");
             int month = sc.nextInt();
             sc.nextLine();
-            if (month > 12 || month < 1) {
-                throw new CheckingException("Tháng ko hợp lệ");
-            } else {
                 switch (month) {
                     case 1:
                     case 3:
@@ -34,13 +31,9 @@ public class Bai3 {
                         System.out.println("Không phải tháng");
                         break;
                 }
-            }
         }
         catch (InputMismatchException e){
             System.out.println("Tháng phải là 1 số");
-        }
-        catch (CheckingException e1){
-            System.out.println(e1.getMessage());
         }
     }
 }

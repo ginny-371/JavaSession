@@ -9,7 +9,7 @@ public class Bai2 {
         if (pw.length() < 10) {
             System.out.println("Mật khẩu yếu");
         } else {
-            if (pw.matches("(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{10,}$")) {
+            if (pw.matches("(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*.,\\d-_?&]{10,}$")) {
                 System.out.println("Mật khẩu mạnh");
             } else System.out.println("Mật khẩu chưa đủ mạnh");
         }
