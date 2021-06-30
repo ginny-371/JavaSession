@@ -15,8 +15,8 @@ public class Collection {
                 new Person("Tian", "China", 20),
                 new Person("Clara", "USA", 40),
                 new Person("Mikura", "Japan", 27),
-                new Person("Sony", "Japan", 29),
-                new Person("Xiang", "China", 78),
+                new Person("Sony", "Japan", 27),
+                new Person("Xiang", "China", 27),
                 new Person("Peter", "France", 18),
                 new Person("Haloy", "Malaysia", 20),
                 new Person("Magie", "Malaysia", 32)
@@ -42,16 +42,32 @@ public class Collection {
                     bai2.add(i);
                 }
             }
-            var result = bai2.stream().sorted(Comparator.comparing(Person::getAge)).collect(Collectors.toList());
+            var result = bai2
+                    .stream()
+                    .sorted(Comparator.comparing(Person::getAge))
+                    .collect(Collectors.toList());
             for (Person over25: result)
             {
                 System.out.printf("\n- %s - %s - %d",over25.getName(), over25.getNationality(), over25.getAge());
             }
         }
+
+    //1.2 Sắp xếp theo tên những người trên 25 tuổi rồi in ra màn hình
+    public void bai2_2(){
+        var over25 = people
+                .stream()
+                .sorted(Comparator.comparing(Person::getAge))
+                .filter(x->x.getAge()>25)
+                .collect(Collectors.toList());
+        for (Person i :over25){
+                System.out.printf("\n- %s - %s - %d",i.getName(), i.getNationality(), i.getAge());
+        }
+    }
+
 //1.3 Tính trung bình tuổi của người theo từng quốc gia
         public void bai3(){
             Map<String,List<Person>> mapPeopleByCountry = new HashMap<>();
-            mapPeopleByCountry = people.stream().collect(Collectors.groupingBy(w->w.getNationality()));
+            mapPeopleByCountry = people.stream().collect(Collectors.groupingBy(Person::getNationality));
             for (Map.Entry<String,List<Person>> i :mapPeopleByCountry.entrySet()){
                 int sum = 0;
                 for (Person age: i.getValue()){
@@ -61,6 +77,14 @@ public class Collection {
                 System.out.printf("\n- %s: %.1f", i.getKey(), avrAge);
             }
         }
+
+//1.3 Tính trung bình tuổi của người theo từng quốc gia
+    public void bai3_2() {
+        Map<String,Double> result = people.stream().collect(Collectors.groupingBy(Person::getNationality, Collectors.averagingDouble(Person::getAge)));
+        for (Map.Entry<String,Double> i :result.entrySet()){
+            System.out.printf("\n- %s: %.1f", i.getKey(), i.getValue());
+        }
+    }
 //1.4 In ra màn hình đánh giá tuổi mỗi người
         public void bai4(){
             String danhGia = "";
@@ -78,4 +102,19 @@ public class Collection {
                 System.out.printf("\n- %s - %s - %d - %s",i.getName(), i.getNationality(),i.getAge(),danhGia);
             }
         }
+//Bai1
+    public void Bai1_new() {
+        var result = people
+                .stream()
+                .filter(x -> x.getAge()==27)
+                .collect(Collectors.toList())
+                .stream()
+                .filter(x ->
+                        x.getNationality().equals("Japan") ||  x.getNationality().equals("Vietnam")
+                ).collect(Collectors.toList())
+                ;
+        for (Person i : result) {
+            System.out.printf("\n- %s - %s - %d", i.getName(), i.getNationality(), i.getAge());
+        }
+    }
 }
