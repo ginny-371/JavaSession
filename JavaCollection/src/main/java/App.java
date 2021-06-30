@@ -1,3 +1,6 @@
 public class App {
-    PersonRepository check = new PersonRepository();
+    public static void main(String[] args) {
+        PersonRepository check = new PersonRepository();
+        System.out.println(check.Bai2());
+    }
 }
