@@ -1,19 +1,19 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args){
-
-        Scanner sc = new Scanner(System.in);
-        int n;
-        //do {
-            System.out.println("Nhap n: ");
-            n = sc.nextInt();
-        //}while (n<0);
-        HamTang tinhTong= new HamTang();
+    public static void main(String[] args) throws InputNumberException {
+        Bai3 bai3 = new Bai3();
+        bai3.giaiBKT3();
+//        Scanner sc = new Scanner(System.in);
+//        int n;
+//        //do {
+//            System.out.println("Nhap n: ");
+//            n = sc.nextInt();
+//        //}while (n<0);
+//        HamTang tinhTong= new HamTang();
         //System.out.printf("%.2f",tinhTong.tinhHamTang1(n));
         //System.out.println(tinhTong.tinhHamTang2(n));
         //tinhTong.daoSo(n);
-        int
 //        System.out.println("Nhập n là : ");
 //        int n = sc.nextInt();
 //        Fibonaci inF= new Fibonaci();

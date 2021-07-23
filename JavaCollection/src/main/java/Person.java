@@ -1,51 +1,49 @@
-import java.time.LocalDate;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class Person {
     public String name;
+
     public String email;
+
     public String job;
+
     public String gender;
+
     public String city;
+
     public int salary;
-    public LocalDate birthdate;
 
-    public int getSalary(){
-        return salary;
-    }
-    public String getName(){
-        return name;
-    }
+    public String birthdate;
 
-    public String getEmail() {
-        return email;
+    public LocalDate convertStringToLocalDate() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        return LocalDate.parse(birthdate, formatter);
     }
 
-    public String getJob() {
-        return job;
-    }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public LocalDate getBirthdate() {
-        return birthdate;
+    public int getAge() {
+        return Period.between(convertStringToLocalDate(), LocalDate.now()).getYears();
     }
 
     @Override
     public String toString() {
-        return "Person{" +
+        return "{" +
                 "name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", job='" + job + '\'' +
                 ", gender='" + gender + '\'' +
                 ", city='" + city + '\'' +
                 ", salary=" + salary +
-                ", birthdate=" + birthdate +
+                ", birthdate=" + convertStringToLocalDate() +
                 '}';
     }
 }
